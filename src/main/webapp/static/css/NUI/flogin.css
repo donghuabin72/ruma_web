@@ -1,0 +1,525 @@
+ body{
+	 overflow:hidden;
+ }
+.star{
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden; 
+}
+
+
+.ball-left{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:999
+}
+.light-bottom{
+	width:100%;
+	position:absolute;
+	bottom:0;
+	right:0;
+	z-index:999;
+}
+.light-bottom img{
+	width:100%
+}
+
+.earth img{ 
+	position:absolute;
+	left:100px;
+	top:-250px; 		
+	z-index:9900;
+	transform:scale(3);
+	animation:earth1 ease-in 1s forwards;
+	-moz-animation:earth1 ease-in 1s forwards;  
+	-webkit-animation:earth1 ease-in 1s forwards;
+	-o-animation:earth1 ease-in 1s forwards;
+}
+@keyframes earth1
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-30deg); 
+	}
+30% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-30deg); 
+	}
+100% {
+	left:400px;
+	top:-450px;
+	transform:scale(1) rotate(0deg); 
+	}	
+}
+
+@-moz-keyframes earth1 /* Firefox */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+30% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+100% {
+	left:400px;
+	top:-450px;
+	transform:scale(1) rotate(0deg); 
+	}
+}
+
+@-webkit-keyframes earth1 /* Safari 和 Chrome */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+30% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+100% {
+	left:400px;
+	top:-450px;
+	transform:scale(1) rotate(0deg); 
+	}
+}
+
+@-o-keyframes earth1 /* Opera */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+30% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5) rotate(-90deg); 
+	}
+100% {
+	left:400px;
+	top:-450px;
+	transform:scale(1) rotate(0deg); 
+	}
+}
+
+.earth-rotate{ 
+	position:absolute; 
+	z-index:9901; 
+	animation:earth2 ease-in 1s forwards;
+	-moz-animation:earth2 ease-in 1s forwards;  
+	-webkit-animation:earth2 ease-in 1s forwards;
+	-o-animation:earth2 ease-in 1s forwards; /* 旋转 */	
+}
+ 
+.earth-rotate img{
+	width:640px; 
+	animation:earth3 ease-in 60s infinite;
+	-moz-animation:earth3 ease-in 60s infinite;  
+	-webkit-animation:earth3 ease-in 60s infinite;
+	-o-animation:earth3 ease-in 60s infinite;  	/* 同地球缩小 */
+}
+@keyframes earth2
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+10% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+100% {
+	left:800px;
+	top:-150px;
+	transform:scale(1); 
+	}	
+}
+
+@-moz-keyframes earth2 /* Firefox */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+10% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+100% {
+	left:800px;
+	top:-150px;
+	transform:scale(1); 
+	}	
+}
+
+@-webkit-keyframes earth2 /* Safari 和 Chrome */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+10% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+100% {
+	left:800px;
+	top:-150px;
+	transform:scale(1); 
+	}
+}
+
+@-o-keyframes earth2 /* Opera */
+{
+0% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+10% { 
+	left:100px;
+	top:-250px;
+	transform:scale(5); 
+	}
+100% {
+	left:800px;
+	top:-150px;
+	transform:scale(1); 
+	}
+}
+/* --------------------------------  */
+@keyframes earth3
+{
+0% { 	 
+	transform:rotate(0deg); 
+	}
+
+100% {
+	transform:rotate(360deg);
+	}	
+}
+
+@-moz-keyframes earth3 /* Firefox */
+{
+0% { 	 
+	transform:rotate(0deg); 
+	}
+
+100% {
+	transform:rotate(360deg);
+	}
+}
+
+@-webkit-keyframes earth3 /* Safari 和 Chrome */
+{
+0% { 	 
+	transform:rotate(0deg); 
+	}
+
+100% {
+	transform:rotate(360deg);
+	}
+}
+
+@-o-keyframes earth3 /* Opera */
+{
+0% { 	 
+	transform:rotate(0deg); 
+	}
+
+100% {
+	transform:rotate(360deg);
+	}
+}
+
+.satellite{
+	position:absolute;
+	left:140px;
+	top:70px; 
+	z-index:9902;
+	opacity:0;
+	animation:satellite 1s 1.2s forwards;
+	-moz-animation:satellite 1s 1.2s forwards;  
+	-webkit-animation:satellite 1s 1.2s forwards;
+	-o-animation:satellite 1.5s 1.2s forwards;
+}
+
+@keyframes satellite
+{
+0% { 	 
+	opacity:0;
+	transform:rotate(-20deg);
+	}
+
+100% {
+	opacity:1;
+	transform:rotate(0deg);
+	}	
+}
+
+@-moz-keyframes satellite /* Firefox */
+{
+0% { 	 
+	opacity:0;
+	transform:rotate(-20deg);
+	}
+
+100% {
+	opacity:1;
+	transform:rotate(0deg);
+	}
+}
+
+@-webkit-keyframes satellite /* Safari 和 Chrome */
+{
+0% { 	 
+	opacity:0;
+	transform:rotate(-20deg);
+	}
+
+100% {
+	opacity:1;
+	transform:rotate(0deg);
+	}
+}
+
+@-o-keyframes satellite /* Opera */
+{
+0% { 	 
+	opacity:0;
+	transform:rotate(-20deg);
+	}
+
+100% {
+	opacity:1;
+	transform:rotate(0deg);
+	}
+}
+
+/* -------------------------------------------- */
+
+.satellite-light{
+	opacity:0;
+	position:absolute;
+	left:330px;
+	top:113px;
+	animation:satellite-light 0.1s 2s forwards;
+	-moz-animation:satellite-light 0.1s 2s forwards;  
+	-webkit-animation:satellite-light 0.1s 2s forwards;
+	-o-animation:satellite-light 0.1s 2s forwards;
+	transform-origin:left;
+}
+
+@keyframes satellite-light
+{
+0% { 	
+	opacity:0; 
+	transform:scaleX(0.01)
+	}
+100% {
+	opacity:1; 
+	transform:scaleX(1)
+	}	
+}
+
+@-moz-keyframes satellite-light /* Firefox */
+{
+0% { 	
+	opacity:0; 
+	transform:scaleX(0.01)
+	}
+100% {
+	opacity:1; 
+	transform:scaleX(1)
+	}
+}
+
+@-webkit-keyframes satellite-light /* Safari 和 Chrome */
+{
+0% { 	
+	opacity:0; 
+	transform:scaleX(0.01)
+	}
+100% {
+	opacity:1; 
+	transform:scaleX(1)
+	}
+}
+
+@-o-keyframes satellite-light /* Opera */
+{
+0% { 	
+	opacity:0; 
+	transform:scaleX(0.01)
+	}
+100% {
+	opacity:1; 
+	transform:scaleX(1)
+	}
+}
+
+/* --------------------------------------------------- */
+.login{
+	margin-left:50%;
+	padding-top:30px;
+	width:400px;
+	height:450px;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; 
+	background:rgba(255,255,255,0.2);		 
+	border:1px rgba(255,255,255,0.3) solid;
+	position:absolute; 
+	left:-200px;
+	top:-450px;
+	z-index:9999;
+	animation:login 0.8s 2.5s forwards;
+	-moz-animation:login 0.8s 2.5s forwards;  
+	-webkit-animation:login 0.8s 2.5s forwards;
+	-o-animation:login 0.8s 2.5s forwards;  
+}
+
+@keyframes login
+{
+0% { 	
+	top:-450px;
+	}
+
+100% {
+	top:20%;
+	}
+}
+
+@-moz-keyframes login /* Firefox */
+{
+0% { 	
+	top:-450px;
+	}
+
+100% {
+	top:20%;
+	}	
+}
+
+@-webkit-keyframes login /* Safari 和 Chrome */
+{
+0% { 	
+	top:-450px;
+	}
+
+100% {
+	top:20%;
+	}
+}
+
+@-o-keyframes login /* Opera */
+{
+0% { 	
+	top:-450px;
+	}
+
+100% {
+	top:20%;
+	}
+}
+
+.login table{
+	width:100%; 
+} 
+.inp-cnt{
+	margin:10px auto;
+	width:300px;	 
+	height:40px;
+	line-height:40px;
+	background:#fff
+}
+.login h1{
+	font-size:40px;
+	color:#fff;
+	text-align:center;
+	font-weight:800;
+}
+.inp-cnt span[class^="icon-"]{
+	width:30px;
+	text-align:center;
+	border-right:1px #ddd solid;
+	vertical-align:middle
+}
+.inp-cnt input[type="text"]{
+	width:240px;
+	height:40px;
+	line-height:40px;
+	border:0
+}
+.inp-cnt input[type="text"]:hover,
+.inp-cnt input[type="text"]:focus{
+	border:0
+}
+.inp-cnt input[type="password"]{
+	width:240px;
+	height:40px;
+	line-height:40px;
+	border:0
+}
+.inp-cnt input[type="password"]:hover,
+.inp-cnt input[type="password"]:focus{
+	border:0
+}
+.login input[type="checkbox"]{
+	margin-left:50px;	
+}
+.login a.custom-btn{
+	margin-top:25px;
+	margin-left:50px;
+	width:300px;
+}
+.text-white{
+	font-size:12px;
+}
+tr.hint td{
+	
+	min-height:0;
+	font-size:12px;
+}
+tr.hint td>div{
+	margin:0 auto;
+	margin-top:10px;
+	padding:0;
+	width: 300px; 
+	color:#fff
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

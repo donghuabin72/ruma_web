@@ -1,0 +1,20 @@
+.title{
+	width:100%;
+	height:35px;
+	line-height: 35px;
+	border:1px #ddd solid;
+	background:#eee;
+	padding-left:10px;
+	font-size:14px;
+	color:#555
+}
+.role-org{
+	height:240px;
+	border:1px #ddd solid;
+	border-top:0;
+	overflow:auto;
+	overflow-x:hidden
+}
+.w10.text-center a.custom-btn{
+	margin:10px 0;
+}

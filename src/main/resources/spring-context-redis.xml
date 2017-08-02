@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.0.xsd"
+	default-lazy-init="true">
+
+	<description>Spring Redis Cache Configuration</description>
+
+	<!-- 加载配置属性文件 -->
+	<context:property-placeholder
+		ignore-unresolvable="true" location="classpath:ruma.properties" />
+
+
+	<!-- redis连接池配置 -->
+	<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+		<property name="maxIdle" value="300" /> <!-- 最大能够保持idel状态的对象数 -->
+		<property name="maxTotal" value="60000" /> <!-- 最大分配的对象数 -->
+		<property name="testOnBorrow" value="true" /> <!-- 当调用borrow Object方法时，是否进行有效性检查 -->
+	</bean>
+	<!-- redis工厂对象 -->
+	<bean id="redisConnectionFactory"
+		class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+		<property name="hostName" value="${redis.host}" /> <!-- redis主机ip -->
+		<property name="port" value="${redis.port}" /> <!-- redis主机端口 -->
+		<property name="poolConfig" ref="jedisPoolConfig" /> <!-- 线连池参数 -->
+	</bean>
+
+	<bean id="jedisPool" class="redis.clients.jedis.JedisPool">
+		<constructor-arg index="0" ref="jedisPoolConfig" />
+		<constructor-arg index="1" value="${redis.host}" type="java.lang.String" />
+		<constructor-arg index="2" value="${redis.port}" type="int" />
+	</bean>
+
+	<!-- redis模板对象 -->
+	<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+		<property name="connectionFactory" ref="redisConnectionFactory"></property>
+	</bean>
+	<!-- Cache管理对象 -->
+	<bean id="redisCacheManager" class="org.springframework.data.redis.cache.RedisCacheManager">
+		<constructor-arg ref="redisTemplate"></constructor-arg>
+		<property name="defaultExpiration" value="30000"></property>
+	</bean>
+	<!-- 键值自动动态生成对象 -->
+	<bean id="cacheKeyGenerator" class="com.neunn.ruma.common.cache.CacheKeyGenerator"></bean>
+	<!-- 申明注解扫描 -->
+	<cache:annotation-driven cache-manager="redisCacheManager" />
+
+</beans>

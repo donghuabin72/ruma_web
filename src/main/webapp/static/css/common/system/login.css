@@ -1,0 +1,112 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑", "宋体";
+	color: #000;
+}
+
+.web_bg {
+	position: absolute;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	z-index: -1
+}
+
+.cnt_left {
+	float: left;
+	padding-left: 30%; /* 100px; */
+	padding-top: 130px
+}
+
+.cnt {
+	float: left;
+	width: 363px;
+	height: 358px;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 60%;
+	top: 180px;
+	margin-left: -20px;
+}
+
+.moveInRight {
+	-webkit-animation: moveInRight 1s ease;
+}
+
+.moveInLeft {
+	-webkit-animation: moveInLeft 1s ease;
+}
+
+.login {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 2px;
+}
+
+h1 {
+	font-size: 20px;
+	font-family: "微软雅黑";
+	line-height: 40px;
+	margin-left: -2px;
+}
+
+.login-line {
+	width: 300px;
+	background: url(../../../img/common/login/login_line.png);
+	height: 5px;
+}
+
+.login-form {
+	margin: 20px 0;
+}
+
+.input_user,.input_pwd,.input_user:focus,.input_pwd:focus {
+	width: 300px;
+	height: 40px;
+	padding: 9px 8px;
+	border: 0;
+	padding-left: 38px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 20px;
+}
+
+.input_user {
+	background: url(../../../img/common/login/login_icon_user.png) no-repeat #fff;
+}
+
+.input_pwd {
+	background: url(../../../img/common/login/login_icon_pwd.png) no-repeat #fff;
+}
+
+.input_user:focus,.input_pwd:focus {
+	border-color: #fff;
+	outline: none;
+	box-shadow: 0 0 6px #006699;
+	outline: 0;
+}
+
+.login_btn,.login_btn:hover,.login_btn:focus {
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	height: 42px;
+	border: 0;
+	box-sizing: border-box;
+	border-radius: 3px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.login_btn {
+	background: #428BCA;
+	width: 300px;
+}
+
+.login_btn:hover,.login_btn:focus {
+	background: #005c89;
+	outline: 0;
+}

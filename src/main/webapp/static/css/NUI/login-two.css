@@ -1,0 +1,152 @@
+.bg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: url(images/login-two/bg.jpg) no-repeat #1a203b;
+	background-size: cover
+}
+
+.login {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -1000px;
+	margin-left: -200px;
+	width: 400px;
+	height: 500px;
+	background: rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	z-index: 999;
+	-webkit-animation: down 0.8s forwards ease-out; 
+	-moz-animation: down 0.8s forwards ease-out; 
+	-ms-animation: down 0.8s forwards ease-out; 
+	animation: down 0.8s forwards ease-out; 
+}
+
+@-webkit-keyframes down {
+	from {
+		margin-top: -1000px;
+	}
+	to {
+		margin-top: -250px;
+	}
+}
+@-moz-keyframes down {
+	from {
+		margin-top: -1000px;
+	}
+	to {
+		margin-top: -250px;
+	}
+}
+@-ms-keyframes down {
+	from {
+		margin-top: -1000px;
+	}
+	to {
+		margin-top: -250px;
+	}
+}
+@-keyframes down {
+	from {
+		margin-top: -1000px;
+	}
+	to {
+		margin-top: -250px;
+	}
+}
+
+.login h2 {
+	margin-top: 40px;
+	font-size: 24px;
+	color: #fff; 
+}
+
+.login h5 {
+	color: #fff;
+}
+
+.login table {
+	margin: 40px auto;
+	width: 270px;
+}
+
+table td {
+	position: relative;
+}
+
+table input {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background: rgba(255, 255, 255, 0.6) !important;
+}
+
+table .p-b-md {
+	padding-bottom: 25px !important;
+}
+
+td.prompt {
+	height: 27px;
+	font-size: 12px;
+	color: #ff5555;
+}
+
+.checkcode a,
+.forgot a {
+	font-size: 14px;
+	color: #c5c4c4;
+}
+
+.checkcode a:hover,
+.forgot a:hover {
+	text-decoration: underline;
+}
+
+*::-moz-placeholder {
+	color: #666;
+}
+
+.name input,
+.psw input {
+	padding-left: 50px;
+}
+
+.name span {
+	padding-right: 12px;
+	color: #fff;
+	position: absolute;
+	left: 12px;
+	top: 13px;
+	border-right: 1px #fff solid;
+}
+
+.psw span {
+	padding-right: 12px;
+	color: #fff;
+	position: absolute;
+	left: 12px;
+	top: 13px;
+	border-right: 1px #fff solid;
+}
+
+.checkcode input {
+	width: 100px;
+}
+
+.checkcode img {
+	height: 40px;
+	vertical-align: middle;
+}
+
+table a {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+}
+
+table a.custom-btn {
+	font-size: 18px !important;
+}

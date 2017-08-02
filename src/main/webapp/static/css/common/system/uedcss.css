@@ -1,0 +1,6 @@
+@charset "utf-8";
+.big_bt_box {
+	background: url(../../../img/common/bg_logo_xh.png) repeat-x left top;
+	height: 80px;
+	width: 100%
+}

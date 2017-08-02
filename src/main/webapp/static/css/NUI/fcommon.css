@@ -1,0 +1,52 @@
+/*针对空间信息共通工程框架的全局样式*/
+body{
+	padding:20px;
+} 
+.w5{
+	width:5%
+}
+.w10{
+	width:10%
+}
+.w15{
+	width:15%
+}
+.w20{
+	width:20%
+}
+.w25{
+	width:25%
+}
+.w30{
+	width:30%
+}
+.w40{
+	width:40%
+}
+.w45{
+	width:45%
+}
+.w50{
+	width:50%
+}
+.w60{
+	width:50%
+}
+.w70{
+	width:50%
+}
+.w80{
+	width:50%
+}
+.bbg{
+	margin:0;
+	padding:20px;
+	border:1px #ddd solid;
+	background:#fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius:3px;
+}
+a.form-btn{
+	width:80px
+}
