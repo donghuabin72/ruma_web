@@ -156,6 +156,10 @@ public class LoginController extends BaseController {
     }
     
     
+    
+    
+    
+    
     @RequestMapping(value = "/checkValidateCode")
     public void checkValidateCode(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
         String validateCode = request.getParameter(VALIDATE_CODE);
