@@ -154,6 +154,10 @@ public class LoginController extends BaseController {
     public String login(HttpServletRequest request, HttpServletResponse response, Model model) {
         return "modules/sys/login";
     }
+    
+    
+    
+    
   
     @RequestMapping(value = "/checkValidateCode")
     public void checkValidateCode(HttpServletRequest request, HttpServletResponse response, Model model) throws IOException {
